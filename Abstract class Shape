@@ -1,0 +1,61 @@
+// Program to demonstrate Abstarct class with abstarct method
+abstract class Shape
+{
+    String color;
+    int Area;
+    Shape(String color,int Area)
+    {
+        this.color=color;
+        this.Area=Area;
+    }
+    abstract void display();
+}
+class Square extends Shape
+{
+    Square(String color,int Area)
+    {
+        super(color,Area);
+    }
+    void display()
+    {
+        System.out.println("Color of Square:" + color);
+        System.out.println("Area of Square:" + Area);
+    }
+}
+class Circle extends Shape
+{
+    Circle(String color,int Area)
+    {
+        super(color,Area);
+    }
+    void display()
+    {
+        System.out.println("Color of Circle:" + color);
+        System.out.println("Area of Circle:" + Area);
+    }
+}
+class Triangle extends Shape
+{
+    Triangle(String color,int Area)
+    {
+        super(color,Area);
+    }
+    void display()
+    {
+        System.out.println("Color of Triangle:" + color);
+        System.out.println("Area of Triangle:" + Area);
+    }
+}
+class Demo
+{
+    public static void main(String[] args)
+    {
+        Shape s1,s2,s3;
+        s1=new Square("Red",144);
+        s2=new Circle("Blue",250);
+        s3=new Triangle("Pink",100);
+        s1.display();
+        s2.display();
+        s3.display(); 
+     }
+}

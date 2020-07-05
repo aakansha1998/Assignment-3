@@ -1,0 +1,22 @@
+// Package p1 which contains class A
+package p1;
+public class A
+{
+    public void display()
+    {
+    System.out.println("Package p1 class A");
+    }
+}
+
+
+// Package p2 which contains class B
+package p2;
+import p1.A;
+public class B
+{
+    public static void main(String a[])
+    {
+    A aobj=new A();
+    aobj.display(); 
+    }
+}

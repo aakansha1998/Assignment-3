@@ -1,0 +1,38 @@
+// Program to create two threads which display a message every half second.
+
+class Thread1 extends Thread
+{
+    public void run() 
+    {
+        try{
+        for(int i=0;i<4;i++)
+        { 
+            System.out.println("Hello");
+            Thread.sleep(500);
+        } 
+        } catch (Exception e){}
+    }
+}
+class Runnable1 implements Runnable
+{
+    public void run() 
+    {
+        try{
+        for(int i=0;i<4;i++)
+        {
+            System.out.println("World");
+            Thread.sleep(500);
+        }} catch (Exception e){}
+    } 
+}
+class TDemo1
+{
+    public static void main(String a[])   
+    {
+        Thread1 t1 = new Thread1();
+        t1.start();
+        Runnable1 r1 = new Runnable1();
+        Thread t2=new Thread(r1);
+        t2.start();
+    }
+}

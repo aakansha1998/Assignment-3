@@ -1,0 +1,21 @@
+// Program to count numbers,characters in command line using exception handling
+class Count1
+{
+    public static void main(String a[])
+    {
+        int number, Ncount=0, Ccount=0;
+        for(int i=0;i<a.length;i++)
+    {
+        try
+        {   
+        number=Integer.parseInt(a[i]);
+        Ncount++;
+        } catch (NumberFormatException e)
+        {
+            Ccount++;
+        }
+    }
+        System.out.println("Number of characters:"+ Ccount);
+        System.out.println("Number of numbers:" + Ncount);
+    }
+}

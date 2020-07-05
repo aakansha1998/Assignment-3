@@ -1,0 +1,29 @@
+// Program to create Pay out of Bounds Exception
+class POBExecption extends Exception
+{
+    private int BPay;
+    POBExecption(int BPay)
+    {
+        this.BPay=BPay;
+    }
+    public String toString()
+    {
+        return("Pay out of bound:"+ BPay);
+    }
+}
+class PODemo
+{
+    public static void main(String a[])
+    {
+        int BPay=Integer.parseInt(a[0]);
+        try
+        {
+            if((BPay<10000)||(BPay>30000)) throw new POBExecption(BPay); 
+            System.out.println("Correct Pay:"+ BPay);
+        }
+        catch(POBExecption pe)
+        {
+            System.out.println(pe);
+        }
+    }
+}

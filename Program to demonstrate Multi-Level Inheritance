@@ -1,0 +1,36 @@
+// Program to demonstrate Multi-Level Inheritance
+class School
+{
+    public void name()
+    {
+        System.out.println("School Name:"+" "+"Kendriya Vidyalaya");
+    }
+}
+class Teacher extends School
+{
+    int TCount;
+    public void TeacherCount(int TCount)
+    {
+        this.TCount=TCount;
+        System.out.println("Count of Teachers:"+ TCount);
+    }
+}
+class Student extends Teacher 
+{
+    int SCount;
+    public void StudentCount(int SCount)
+    {
+        this.SCount=SCount;
+        System.out.println("Count of Students:" + SCount);
+    }
+}
+class Multi
+{
+    public static void main(String a[])
+    {
+        Student s=new Student();
+        s.name();
+        s.TeacherCount(50);
+        s.StudentCount(500);
+    }
+}

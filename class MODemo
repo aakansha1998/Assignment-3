@@ -1,0 +1,24 @@
+// program to demonstrate Method Overriding
+class StudentList
+{
+    void show()
+    {
+        System.out.println("First student name:" + "Ram" + " "+ "Student ID:" + 100);
+    }   
+}
+class Student extends StudentList
+{
+    void show()
+    {
+        super.show();
+        System.out.println("Second student name:" + "Shyam" + " "+"Student ID:" + 101);
+    }
+}
+class MODemo
+{
+    public static void main(String a[])
+    {
+        StudentList s=new Student();
+        s.show();
+    }
+}

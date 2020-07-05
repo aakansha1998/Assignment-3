@@ -1,0 +1,42 @@
+// program to create an interface Shape with CalculateArea method 
+interface Shape
+{
+    public void CalculateArea();
+}
+class Circle implements Shape
+{
+    int r=2; float Area;
+    public void CalculateArea()
+    {
+        Area=3.14f*r*r;
+        System.out.println("Area of Circle:" + Area);
+    }
+}
+class Square implements Shape
+{
+    int n=5; int Area;
+    public void CalculateArea()
+    {
+        Area=n*n;
+        System.out.println("Area of Square:" + Area);
+    }
+}
+class Triangle implements Shape
+{
+    int b=2;int h=4; float Area;
+    public void CalculateArea()
+    {
+        Area=0.5f*b*h;
+        System.out.println("Area of Triangle:" + Area);
+    }
+}
+class IDemo
+{
+    public static void main(String a[])
+    {
+        Shape s;
+        s=new Circle(); s.CalculateArea();
+        s=new Square(); s.CalculateArea();
+        s=new Triangle(); s.CalculateArea();
+    }
+}

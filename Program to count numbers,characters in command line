@@ -16,6 +16,6 @@ class Count1
         }
     }
         System.out.println("Number of characters:"+ Ccount);
-        System.out.println("Number of numbers:" + Ncount);
+        System.out.println("Count of numbers:" + Ncount);
     }
 }
